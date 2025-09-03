@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             colorDialog = new ColorDialog();
             fontDialog = new FontDialog();
@@ -138,6 +137,7 @@
             // 
             comboLanguage.Name = "comboLanguage";
             comboLanguage.Size = new Size(121, 25);
+            comboLanguage.SelectedChanged += comboLanguage_SelectedChanged;
             // 
             // toolStripSeparator1
             // 
@@ -279,6 +279,7 @@
             btnCalculateEventHorizon.TabIndex = 0;
             btnCalculateEventHorizon.Text = "Calculate";
             btnCalculateEventHorizon.UseVisualStyleBackColor = true;
+            btnCalculateEventHorizon.Click += btnCalculateEventHorizon_Click;
             // 
             // groupBoxTemperatureConversion
             // 
@@ -354,6 +355,7 @@
             btnCalculateTemperatureConversion.TabIndex = 0;
             btnCalculateTemperatureConversion.Text = "Calculate";
             btnCalculateTemperatureConversion.UseVisualStyleBackColor = true;
+            btnCalculateTemperatureConversion.Click += btnCalculateTemperatureConversion_Click;
             // 
             // groupBoxStarVelocity
             // 
@@ -458,10 +460,13 @@
             btnCalculateStarVelocity.TabIndex = 0;
             btnCalculateStarVelocity.Text = "Calculate";
             btnCalculateStarVelocity.UseVisualStyleBackColor = true;
+            btnCalculateStarVelocity.Click += btnCalculateStarVelocity_Click;
             // 
             // datagridCalculations
             // 
+            datagridCalculations.AllowUserToAddRows = false;
             datagridCalculations.AllowUserToDeleteRows = false;
+            datagridCalculations.AllowUserToOrderColumns = true;
             datagridCalculations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datagridCalculations.Dock = DockStyle.Fill;
             datagridCalculations.Location = new Point(283, 3);
@@ -545,6 +550,7 @@
             btnCalculateStarDistance.TabIndex = 0;
             btnCalculateStarDistance.Text = "Calculate";
             btnCalculateStarDistance.UseVisualStyleBackColor = true;
+            btnCalculateStarDistance.Click += btnCalculateStarDistance_Click;
             // 
             // MainWindow
             // 
