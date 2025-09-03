@@ -34,8 +34,10 @@
             statusStrip = new StatusStrip();
             labelStatus = new ToolStripStatusLabel();
             toolStrip = new ToolStrip();
-            labelLanguage = new ToolStripLabel();
-            comboLanguage = new ToolStripComboBox();
+            menuLanguage = new ToolStripDropDownButton();
+            menuitemEnglish = new ToolStripMenuItem();
+            menuitemGerman = new ToolStripMenuItem();
+            menuitemFrench = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             menuTheme = new ToolStripDropDownButton();
             menuitemThemeLight = new ToolStripMenuItem();
@@ -120,24 +122,42 @@
             // 
             // toolStrip
             // 
-            toolStrip.Items.AddRange(new ToolStripItem[] { labelLanguage, comboLanguage, toolStripSeparator1, menuTheme, menuitemFont });
+            toolStrip.Items.AddRange(new ToolStripItem[] { menuLanguage, toolStripSeparator1, menuTheme, menuitemFont });
             toolStrip.Location = new Point(0, 0);
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(584, 25);
             toolStrip.TabIndex = 1;
             toolStrip.Text = "toolStrip1";
             // 
-            // labelLanguage
+            // menuLanguage
             // 
-            labelLanguage.Name = "labelLanguage";
-            labelLanguage.Size = new Size(62, 22);
-            labelLanguage.Text = "Language:";
+            menuLanguage.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            menuLanguage.DropDownItems.AddRange(new ToolStripItem[] { menuitemEnglish, menuitemGerman, menuitemFrench });
+            menuLanguage.ImageTransparentColor = Color.Magenta;
+            menuLanguage.Name = "menuLanguage";
+            menuLanguage.Size = new Size(72, 22);
+            menuLanguage.Text = "Language";
             // 
-            // comboLanguage
+            // menuitemEnglish
             // 
-            comboLanguage.Name = "comboLanguage";
-            comboLanguage.Size = new Size(121, 25);
-            comboLanguage.SelectedChanged += comboLanguage_SelectedChanged;
+            menuitemEnglish.Name = "menuitemEnglish";
+            menuitemEnglish.Size = new Size(180, 22);
+            menuitemEnglish.Text = "English";
+            menuitemEnglish.Click += menuitemEnglish_Click;
+            // 
+            // menuitemGerman
+            // 
+            menuitemGerman.Name = "menuitemGerman";
+            menuitemGerman.Size = new Size(180, 22);
+            menuitemGerman.Text = "German";
+            menuitemGerman.Click += menuitemGerman_Click;
+            // 
+            // menuitemFrench
+            // 
+            menuitemFrench.Name = "menuitemFrench";
+            menuitemFrench.Size = new Size(180, 22);
+            menuitemFrench.Text = "French";
+            menuitemFrench.Click += menuitemFrench_Click;
             // 
             // toolStripSeparator1
             // 
@@ -458,7 +478,7 @@
             btnCalculateStarVelocity.Name = "btnCalculateStarVelocity";
             btnCalculateStarVelocity.Size = new Size(75, 23);
             btnCalculateStarVelocity.TabIndex = 0;
-            btnCalculateStarVelocity.Text = "Calculate";
+            btnCalculateStarVelocity.Text = "Calculate2";
             btnCalculateStarVelocity.UseVisualStyleBackColor = true;
             btnCalculateStarVelocity.Click += btnCalculateStarVelocity_Click;
             // 
@@ -615,8 +635,6 @@
         private ToolStrip toolStrip;
         private TableLayoutPanel tableLayoutPanel1;
         private ToolStripStatusLabel labelStatus;
-        private ToolStripComboBox comboLanguage;
-        private ToolStripLabel labelLanguage;
         private ToolStripDropDownButton menuTheme;
         private ToolStripMenuItem menuitemThemeLight;
         private ToolStripMenuItem menuitemThemeDark;
@@ -655,5 +673,9 @@
         private Label labelRestWavelength;
         private NumericUpDown numericRestWavelength;
         private Button btnCalculateStarVelocity;
+        private ToolStripDropDownButton menuLanguage;
+        private ToolStripMenuItem menuitemEnglish;
+        private ToolStripMenuItem menuitemGerman;
+        private ToolStripMenuItem menuitemFrench;
     }
 }
