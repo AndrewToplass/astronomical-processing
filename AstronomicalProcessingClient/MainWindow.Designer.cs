@@ -149,14 +149,14 @@
             // 
             menuitemGerman.Name = "menuitemGerman";
             menuitemGerman.Size = new Size(180, 22);
-            menuitemGerman.Text = "German";
+            menuitemGerman.Text = "Deutsch";
             menuitemGerman.Click += menuitemGerman_Click;
             // 
             // menuitemFrench
             // 
             menuitemFrench.Name = "menuitemFrench";
             menuitemFrench.Size = new Size(180, 22);
-            menuitemFrench.Text = "French";
+            menuitemFrench.Text = "Français";
             menuitemFrench.Click += menuitemFrench_Click;
             // 
             // toolStripSeparator1
@@ -178,21 +178,21 @@
             // 
             menuitemThemeLight.CheckOnClick = true;
             menuitemThemeLight.Name = "menuitemThemeLight";
-            menuitemThemeLight.Size = new Size(116, 22);
+            menuitemThemeLight.Size = new Size(180, 22);
             menuitemThemeLight.Text = "Light";
             // 
             // menuitemThemeDark
             // 
             menuitemThemeDark.CheckOnClick = true;
             menuitemThemeDark.Name = "menuitemThemeDark";
-            menuitemThemeDark.Size = new Size(116, 22);
+            menuitemThemeDark.Size = new Size(180, 22);
             menuitemThemeDark.Text = "Dark";
             // 
             // menuitemThemeCustom
             // 
             menuitemThemeCustom.CheckOnClick = true;
             menuitemThemeCustom.Name = "menuitemThemeCustom";
-            menuitemThemeCustom.Size = new Size(116, 22);
+            menuitemThemeCustom.Size = new Size(180, 22);
             menuitemThemeCustom.Text = "Custom";
             // 
             // menuitemFont
@@ -207,6 +207,7 @@
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
@@ -478,7 +479,7 @@
             btnCalculateStarVelocity.Name = "btnCalculateStarVelocity";
             btnCalculateStarVelocity.Size = new Size(75, 23);
             btnCalculateStarVelocity.TabIndex = 0;
-            btnCalculateStarVelocity.Text = "Calculate2";
+            btnCalculateStarVelocity.Text = "Calculate";
             btnCalculateStarVelocity.UseVisualStyleBackColor = true;
             btnCalculateStarVelocity.Click += btnCalculateStarVelocity_Click;
             // 

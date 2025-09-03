@@ -117,7 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuTheme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
+        Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="menuitemFont.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
+        Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnCalculateEventHorizon.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="btnCalculateTemperatureConversion.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="labelObservedWavelength.Text" xml:space="preserve">
+    <value>Longueur d'onde observée (m)</value>
+  </data>
+  <data name="labelRestWavelength.Text" xml:space="preserve">
+    <value>Longueur d'onde émise (m)</value>
+  </data>
   <data name="btnCalculateStarVelocity.Text" xml:space="preserve">
-    <value>german</value>
+    <value>Calculer</value>
+  </data>
+  <data name="btnCalculateStarDistance.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="groupBoxStarVelocity.Text" xml:space="preserve">
+    <value>Vitesse radiale d'une étoile</value>
+  </data>
+  <data name="groupBoxStarDistance.Text" xml:space="preserve">
+    <value>Distances des étoiles</value>
+  </data>
+  <data name="groupBoxTemperatureConversion.Text" xml:space="preserve">
+    <value>Conversion de température</value>
+  </data>
+  <data name="groupBoxEventHorizon.Text" xml:space="preserve">
+    <value>L'horizon des événements</value>
+  </data>
+  <data name="labelStarAngle.Text" xml:space="preserve">
+    <value>Angle (arcsecondes)</value>
+  </data>
+  <data name="labelTemperatureC.Text" xml:space="preserve">
+    <value>Température (°C)</value>
+  </data>
+  <data name="labelBlackholeMass.Text" xml:space="preserve">
+    <value>Masse (kg)</value>
+  </data>
+  <data name="menuLanguage.Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="menuTheme.Text" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="menuitemThemeLight.Text" xml:space="preserve">
+    <value>Clair</value>
+  </data>
+  <data name="menuitemThemeDark.Text" xml:space="preserve">
+    <value>Foncé</value>
+  </data>
+  <data name="menuitemThemeCustom.Text" xml:space="preserve">
+    <value>Personnalisé</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuitemFont" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="MainWindow.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

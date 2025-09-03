@@ -118,22 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>203, 17</value>
-  </data>
-  <data name="fontDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>318, 17</value>
-  </data>
-  <data name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>428, 17</value>
-  </data>
-  <data name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>537, 17</value>
-  </data>
   <data name="menuTheme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        wQAADsEBuJFr7QAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
         /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
         Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
 </value>
@@ -141,12 +129,81 @@
   <data name="menuitemFont.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        wQAADsEBuJFr7QAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
         /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
         Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnCalculateEventHorizon.Text" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="btnCalculateTemperatureConversion.Text" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="labelObservedWavelength.Text" xml:space="preserve">
+    <value>Observed wavelength (m)</value>
+  </data>
+  <data name="labelRestWavelength.Text" xml:space="preserve">
+    <value>Emitted wavelength (m)</value>
+  </data>
   <data name="btnCalculateStarVelocity.Text" xml:space="preserve">
-    <value>calculate</value>
+    <value>Calculate</value>
+  </data>
+  <data name="btnCalculateStarDistance.Text" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="groupBoxStarVelocity.Text" xml:space="preserve">
+    <value>Star velocity</value>
+  </data>
+  <data name="groupBoxStarDistance.Text" xml:space="preserve">
+    <value>Star distance</value>
+  </data>
+  <data name="groupBoxTemperatureConversion.Text" xml:space="preserve">
+    <value>Temperature conversion</value>
+  </data>
+  <data name="groupBoxEventHorizon.Text" xml:space="preserve">
+    <value>Blackhole event horizon</value>
+  </data>
+  <data name="labelStarAngle.Text" xml:space="preserve">
+    <value>Angle (arcseconds)</value>
+  </data>
+  <data name="labelTemperatureC.Text" xml:space="preserve">
+    <value>Temperature (°C)</value>
+  </data>
+  <data name="labelBlackholeMass.Text" xml:space="preserve">
+    <value>Mass (kg)</value>
+  </data>
+  <data name="menuLanguage.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="fontDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>132, 17</value>
+  </data>
+  <data name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>242, 17</value>
+  </data>
+  <data name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>351, 17</value>
+  </data>
+  <data name="menuTheme.Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="menuitemThemeLight.Text" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="menuitemThemeDark.Text" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="menuitemThemeCustom.Text" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="menuitemFont" xml:space="preserve">
+    <value>Font...</value>
+  </data>
+  <data name="MainWindow.Text" xml:space="preserve">
+    <value>Astronomical Processing</value>
   </data>
 </root>
