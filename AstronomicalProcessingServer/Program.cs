@@ -1,4 +1,4 @@
-﻿using AstroServer;
+﻿using AstronomicalProcessingServer;
 
 using CoreWCF.Configuration;
 
@@ -24,8 +24,8 @@ builder.Configure(configure =>
 {
     configure.UseServiceModel(serviceBuilder =>
     {
-        serviceBuilder.AddService<AstroContract>();
-        serviceBuilder.AddServiceEndpoint<AstroContract, IAstroContract>(
+        serviceBuilder.AddService<AstroServer>();
+        serviceBuilder.AddServiceEndpoint<AstroServer, IAstroContract>(
             new CoreWCF.NetNamedPipeBinding(),
             "/AstroService"
         );

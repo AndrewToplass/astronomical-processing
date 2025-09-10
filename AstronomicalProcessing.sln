@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroMath", "AstroMath\Astr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomicalProcessingClient", "AstronomicalProcessingClient\AstronomicalProcessingClient.csproj", "{B94B9C1A-2BA9-46BC-AB06-E306022F0256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroServer", "AstroServer\AstroServer.csproj", "{208EF998-D810-4042-9A8C-BD286B425FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomicalProcessingServer", "AstronomicalProcessingServer\AstronomicalProcessingServer.csproj", "{208EF998-D810-4042-9A8C-BD286B425FD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{AE0DAA51-2A62-4B33-924F-8B03D17E30AA}"
 EndProject

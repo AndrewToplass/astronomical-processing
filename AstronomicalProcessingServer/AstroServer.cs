@@ -8,9 +8,9 @@ using AstroMath;
 
 using ServiceContracts;
 
-namespace AstroServer;
+namespace AstronomicalProcessingServer;
 
-internal class AstroContract : IAstroContract
+internal class AstroServer : IAstroContract
 {
     public double BlackholeEventHorizon(double massKg) => Calculations.BlackholeEventHorizon(massKg);
 
