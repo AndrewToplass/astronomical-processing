@@ -191,4 +191,28 @@
   <data name="menuitemFont.Text" xml:space="preserve">
     <value>Typographie...</value>
   </data>
+  <data name="CalculationResult.Time" xml:space="preserve">
+    <value>Horodatage</value>
+  </data>
+  <data name="CalculationResult.Result" xml:space="preserve">
+    <value>Résultat</value>
+  </data>
+  <data name="CalculationResult.Operation" xml:space="preserve">
+    <value>Opération</value>
+  </data>
+  <data name="CalculationOperation.None" xml:space="preserve">
+    <value>Néant</value>
+  </data>
+  <data name="CalculationOperation.StarVelocity" xml:space="preserve">
+    <value>Vitesse radiale d'une étoile</value>
+  </data>
+  <data name="CalculationOperation.TemperatureConversion" xml:space="preserve">
+    <value>Conversion de température</value>
+  </data>
+  <data name="CalculationOperation.EventHorizon" xml:space="preserve">
+    <value>L'horizon des événements</value>
+  </data>
+  <data name="CalculationOperation.StarDistance" xml:space="preserve">
+    <value>Distances des étoiles</value>
+  </data>
 </root>

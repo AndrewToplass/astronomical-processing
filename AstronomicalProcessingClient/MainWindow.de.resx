@@ -174,4 +174,28 @@
   <data name="menuitemFont.Text" xml:space="preserve">
     <value>Schriftart</value>
   </data>
+  <data name="CalculationResult.Time" xml:space="preserve">
+    <value>Ziet</value>
+  </data>
+  <data name="CalculationResult.Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="CalculationResult.Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="CalculationOperation.None" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="CalculationOperation.StarVelocity" xml:space="preserve">
+    <value>Sterne Geschwindigkeiten</value>
+  </data>
+  <data name="CalculationOperation.TemperatureConversion" xml:space="preserve">
+    <value>Temperaturumrechnung</value>
+  </data>
+  <data name="CalculationOperation.EventHorizon" xml:space="preserve">
+    <value>Ereignishorizont</value>
+  </data>
+  <data name="CalculationOperation.StarDistance" xml:space="preserve">
+    <value>Sternabstand</value>
+  </data>
 </root>

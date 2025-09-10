@@ -203,4 +203,28 @@
   <data name="menuitemFont.Text" xml:space="preserve">
     <value>Font...</value>
   </data>
+  <data name="CalculationResult.Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="CalculationResult.Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="CalculationResult.Operation" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="CalculationOperation.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="CalculationOperation.StarVelocity" xml:space="preserve">
+    <value>Star velocity</value>
+  </data>
+  <data name="CalculationOperation.TemperatureConversion" xml:space="preserve">
+    <value>Temperature conversion</value>
+  </data>
+  <data name="CalculationOperation.EventHorizon" xml:space="preserve">
+    <value>Event horizon</value>
+  </data>
+  <data name="CalculationOperation.StarDistance" xml:space="preserve">
+    <value>Star distance</value>
+  </data>
 </root>

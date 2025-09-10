@@ -13,11 +13,13 @@ public partial class MainWindow : Form
     {
         InitializeComponent();
         datagridCalculations.DataSource = _calculations;
+
         _calculations.Add(new()
         {
             Operation = CalculationOperation.StarVelocity,
             Result = 123.45
         });
+
 
         ChangeLanguage(CultureInfo.CurrentCulture);
 
@@ -86,6 +88,17 @@ public partial class MainWindow : Form
         }
 
         ResumeLayout();
+
+        if (datagridCalculations.Columns[nameof(CalculationResult.Time)] is not DataGridViewColumn timeColumn ||
+            datagridCalculations.Columns[nameof(CalculationResult.Result)] is not DataGridViewColumn resultColumn ||
+            datagridCalculations.Columns[nameof(CalculationResult.Operation)] is not DataGridViewColumn operationColumn
+        ) return;
+
+        timeColumn.HeaderText = resources.GetString("CalculationResult.Time") ?? nameof(CalculationResult.Time);
+        resultColumn.HeaderText = resources.GetString("CalculationResult.Result") ?? nameof(CalculationResult.Result);
+        operationColumn.HeaderText = resources.GetString("CalculationResult.Operation") ?? nameof(CalculationResult.Operation);
+
+        datagridCalculations.Refresh();
     }
 
     private IEnumerable<ToolStripItem> GetAllToolStripItems(ToolStrip item)
@@ -126,17 +139,17 @@ public partial class MainWindow : Form
 
     private void menuitemEnglish_Click(object sender, EventArgs e)
     {
-        ChangeLanguage(new CultureInfo("en-US"));
+        ChangeLanguage(new CultureInfo("en"));
     }
 
     private void menuitemGerman_Click(object sender, EventArgs e)
     {
-        ChangeLanguage(new CultureInfo("de-DE"));
+        ChangeLanguage(new CultureInfo("de"));
 
     }
 
     private void menuitemFrench_Click(object sender, EventArgs e)
     {
-        ChangeLanguage(new CultureInfo("fr-FR"));
+        ChangeLanguage(new CultureInfo("fr"));
     }
 }
