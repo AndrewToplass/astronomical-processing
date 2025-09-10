@@ -198,17 +198,16 @@
   <data name="DataGrid.Headers.Inputs.HeaderText" xml:space="preserve">
     <value>Eingaben</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Messagebox.ErrorTitle" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Messagebox.ErrorTitle" xml:space="preserve">
+    <value>Fehler</value>
   </data>
-  <data name="Error.EndpointNotFond" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Error.EndpointNotFound" xml:space="preserve">
+    <value>Der Server wurde nicht gefunden. Stellen Sie sicher, dass Ihr Gerät mit dem Internet verbunden ist und der Server läuft.</value>
   </data>
-  <data name="Error.Communication" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Error.Communication" xml:space="preserve">
+    <value>Es gab ein Problem bei der Kommunikation mit dem Server.</value>
   </data>
-  <data name="Error.Generic" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Error.Generic" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten.</value>
   </data>
 </root>
