@@ -156,7 +156,7 @@
     <value>Vitesse radiale d'une étoile</value>
   </data>
   <data name="groupBoxStarDistance.Text" xml:space="preserve">
-    <value>Distances des étoiles</value>
+    <value>Distances de l'étoile</value>
   </data>
   <data name="groupBoxTemperatureConversion.Text" xml:space="preserve">
     <value>Conversion de température</value>

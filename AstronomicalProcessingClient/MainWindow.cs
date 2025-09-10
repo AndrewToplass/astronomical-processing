@@ -101,7 +101,7 @@ public partial class MainWindow : Form
         datagridCalculations.Refresh();
     }
 
-    private IEnumerable<ToolStripItem> GetAllToolStripItems(ToolStrip item)
+    private static IEnumerable<ToolStripItem> GetAllToolStripItems(ToolStrip item)
     {
         return item.Items.Cast<ToolStripItem>().SelectMany(GetItems);
 
@@ -129,7 +129,7 @@ public partial class MainWindow : Form
         }
     }
 
-    private IEnumerable<Control> GetAllControls(Control control)
+    private static IEnumerable<Control> GetAllControls(Control control)
     {
         var controls = control.Controls.Cast<Control>();
         return controls
