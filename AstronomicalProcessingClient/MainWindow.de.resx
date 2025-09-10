@@ -172,19 +172,16 @@
     <value>Benutzerdefiniertes</value>
   </data>
   <data name="menuitemFont.Text" xml:space="preserve">
-    <value>Schriftart</value>
+    <value>Schriftart...</value>
   </data>
-  <data name="CalculationResult.Time" xml:space="preserve">
+  <data name="DataGrid.Headers.Time.HeaderText" xml:space="preserve">
     <value>Ziet</value>
   </data>
-  <data name="CalculationResult.Result" xml:space="preserve">
+  <data name="DataGrid.Headers.Result.HeaderText" xml:space="preserve">
     <value>Ergebnis</value>
   </data>
-  <data name="CalculationResult.Operation" xml:space="preserve">
+  <data name="DataGrid.Headers.Operation.HeaderText" xml:space="preserve">
     <value>Operation</value>
-  </data>
-  <data name="CalculationOperation.None" xml:space="preserve">
-    <value>Keine</value>
   </data>
   <data name="CalculationOperation.StarVelocity" xml:space="preserve">
     <value>Sterne Geschwindigkeiten</value>
@@ -197,5 +194,21 @@
   </data>
   <data name="CalculationOperation.StarDistance" xml:space="preserve">
     <value>Sternabstand</value>
+  </data>
+  <data name="DataGrid.Headers.Inputs.HeaderText" xml:space="preserve">
+    <value>Eingaben</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Messagebox.ErrorTitle" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Error.EndpointNotFond" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Error.Communication" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Error.Generic" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

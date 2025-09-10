@@ -121,7 +121,7 @@
   <data name="menuTheme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        vgAADr4B6kKxwAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
         /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
         Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
 </value>
@@ -129,7 +129,7 @@
   <data name="menuitemFont.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
+        vgAADr4B6kKxwAAAAI1JREFUOE9j+Pbt239KMAOIcHJyIgujGPDh/UeSMMkGPL918v+JblMwTZYBJ7pN
         /h+qlQIbQpYBEBeYEHbBpLOv/i+49BrDAHSM1YCsfS/+Sy98BMaEDMEwAFkzMYagGKDTsBJDMzZDQOzW
         Ey8xDUDXhI5BGkEYxge5liQDsGGQqykyAISpZwAlmIFSAAAHNfyc4iTN4wAAAABJRU5ErkJggg==
 </value>
@@ -203,17 +203,14 @@
   <data name="menuitemFont.Text" xml:space="preserve">
     <value>Font...</value>
   </data>
-  <data name="CalculationResult.Time" xml:space="preserve">
+  <data name="DataGrid.Headers.Time.HeaderText" xml:space="preserve">
     <value>Time</value>
   </data>
-  <data name="CalculationResult.Result" xml:space="preserve">
+  <data name="DataGrid.Headers.Result.HeaderText" xml:space="preserve">
     <value>Result</value>
   </data>
-  <data name="CalculationResult.Operation" xml:space="preserve">
+  <data name="DataGrid.Headers.Operation.HeaderText" xml:space="preserve">
     <value>Operation</value>
-  </data>
-  <data name="CalculationOperation.None" xml:space="preserve">
-    <value>None</value>
   </data>
   <data name="CalculationOperation.StarVelocity" xml:space="preserve">
     <value>Star velocity</value>
@@ -226,5 +223,20 @@
   </data>
   <data name="CalculationOperation.StarDistance" xml:space="preserve">
     <value>Star distance</value>
+  </data>
+  <data name="DataGrid.Headers.Inputs.HeaderText" xml:space="preserve">
+    <value>Inputs</value>
+  </data>
+  <data name="Messagebox.ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error.EndpointNotFond" xml:space="preserve">
+    <value>The server was not found, make sure your device is connected to the internet and the server is running.</value>
+  </data>
+  <data name="Error.Communication" xml:space="preserve">
+    <value>There was a problem communicating with the server.</value>
+  </data>
+  <data name="Error.Generic" xml:space="preserve">
+    <value>An error occurred.</value>
   </data>
 </root>
