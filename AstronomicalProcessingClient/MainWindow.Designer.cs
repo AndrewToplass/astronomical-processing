@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            colorDialog = new ColorDialog();
             fontDialog = new FontDialog();
-            statusStrip = new StatusStrip();
-            labelStatus = new ToolStripStatusLabel();
             toolStrip = new ToolStrip();
             menuLanguage = new ToolStripDropDownButton();
             menuitemEnglish = new ToolStripMenuItem();
@@ -77,7 +74,6 @@
             labelStarAngle = new Label();
             numericStarAngle = new NumericUpDown();
             btnCalculateStarDistance = new Button();
-            statusStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             groupBoxEventHorizon.SuspendLayout();
@@ -105,21 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)numericStarAngle).BeginInit();
             SuspendLayout();
             // 
-            // statusStrip
-            // 
-            statusStrip.Items.AddRange(new ToolStripItem[] { labelStatus });
-            statusStrip.Location = new Point(0, 639);
-            statusStrip.Name = "statusStrip";
-            statusStrip.Size = new Size(584, 22);
-            statusStrip.TabIndex = 0;
-            statusStrip.Text = "statusStrip";
-            // 
-            // labelStatus
-            // 
-            labelStatus.Name = "labelStatus";
-            labelStatus.Size = new Size(118, 17);
-            labelStatus.Text = "toolStripStatusLabel1";
-            // 
             // toolStrip
             // 
             toolStrip.Items.AddRange(new ToolStripItem[] { menuLanguage, toolStripSeparator1, menuTheme, menuitemFont });
@@ -141,21 +122,21 @@
             // menuitemEnglish
             // 
             menuitemEnglish.Name = "menuitemEnglish";
-            menuitemEnglish.Size = new Size(180, 22);
+            menuitemEnglish.Size = new Size(117, 22);
             menuitemEnglish.Text = "English";
             menuitemEnglish.Click += menuitemEnglish_Click;
             // 
             // menuitemGerman
             // 
             menuitemGerman.Name = "menuitemGerman";
-            menuitemGerman.Size = new Size(180, 22);
+            menuitemGerman.Size = new Size(117, 22);
             menuitemGerman.Text = "Deutsch";
             menuitemGerman.Click += menuitemGerman_Click;
             // 
             // menuitemFrench
             // 
             menuitemFrench.Name = "menuitemFrench";
-            menuitemFrench.Size = new Size(180, 22);
+            menuitemFrench.Size = new Size(117, 22);
             menuitemFrench.Text = "Français";
             menuitemFrench.Click += menuitemFrench_Click;
             // 
@@ -176,24 +157,24 @@
             // 
             // menuitemThemeLight
             // 
-            menuitemThemeLight.CheckOnClick = true;
             menuitemThemeLight.Name = "menuitemThemeLight";
-            menuitemThemeLight.Size = new Size(180, 22);
+            menuitemThemeLight.Size = new Size(116, 22);
             menuitemThemeLight.Text = "Light";
+            menuitemThemeLight.Click += menuitemThemeLight_Click;
             // 
             // menuitemThemeDark
             // 
-            menuitemThemeDark.CheckOnClick = true;
             menuitemThemeDark.Name = "menuitemThemeDark";
-            menuitemThemeDark.Size = new Size(180, 22);
+            menuitemThemeDark.Size = new Size(116, 22);
             menuitemThemeDark.Text = "Dark";
+            menuitemThemeDark.Click += menuitemThemeDark_Click;
             // 
             // menuitemThemeCustom
             // 
-            menuitemThemeCustom.CheckOnClick = true;
             menuitemThemeCustom.Name = "menuitemThemeCustom";
-            menuitemThemeCustom.Size = new Size(180, 22);
+            menuitemThemeCustom.Size = new Size(116, 22);
             menuitemThemeCustom.Text = "Custom";
+            menuitemThemeCustom.Click += menuitemThemeCustom_Click;
             // 
             // menuitemFont
             // 
@@ -203,10 +184,10 @@
             menuitemFont.Name = "menuitemFont";
             menuitemFont.Size = new Size(44, 22);
             menuitemFont.Text = "Font...";
+            menuitemFont.Click += menuitemFont_Click;
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
@@ -216,23 +197,24 @@
             tableLayoutPanel1.Controls.Add(groupBoxStarVelocity, 0, 0);
             tableLayoutPanel1.Controls.Add(datagridCalculations, 1, 0);
             tableLayoutPanel1.Controls.Add(groupBoxStarDistance, 0, 1);
-            tableLayoutPanel1.Location = new Point(12, 28);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 25);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(560, 608);
+            tableLayoutPanel1.Size = new Size(584, 636);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // groupBoxEventHorizon
             // 
             groupBoxEventHorizon.Controls.Add(tableLayoutPanel5);
             groupBoxEventHorizon.Dock = DockStyle.Fill;
-            groupBoxEventHorizon.Location = new Point(3, 459);
+            groupBoxEventHorizon.Location = new Point(3, 480);
             groupBoxEventHorizon.Name = "groupBoxEventHorizon";
-            groupBoxEventHorizon.Size = new Size(274, 146);
+            groupBoxEventHorizon.Size = new Size(286, 153);
             groupBoxEventHorizon.TabIndex = 5;
             groupBoxEventHorizon.TabStop = false;
             groupBoxEventHorizon.Text = "Blackhole Event Horizon";
@@ -250,7 +232,7 @@
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel5.Size = new Size(268, 124);
+            tableLayoutPanel5.Size = new Size(280, 131);
             tableLayoutPanel5.TabIndex = 2;
             // 
             // flowLayoutPanel10
@@ -258,9 +240,9 @@
             flowLayoutPanel10.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel10.AutoSize = true;
             flowLayoutPanel10.Controls.Add(flowLayoutPanel11);
-            flowLayoutPanel10.Location = new Point(3, 37);
+            flowLayoutPanel10.Location = new Point(3, 40);
             flowLayoutPanel10.Name = "flowLayoutPanel10";
-            flowLayoutPanel10.Size = new Size(181, 50);
+            flowLayoutPanel10.Size = new Size(193, 50);
             flowLayoutPanel10.TabIndex = 3;
             // 
             // flowLayoutPanel11
@@ -294,7 +276,7 @@
             // btnCalculateEventHorizon
             // 
             btnCalculateEventHorizon.Anchor = AnchorStyles.Right;
-            btnCalculateEventHorizon.Location = new Point(190, 50);
+            btnCalculateEventHorizon.Location = new Point(202, 54);
             btnCalculateEventHorizon.Name = "btnCalculateEventHorizon";
             btnCalculateEventHorizon.Size = new Size(75, 23);
             btnCalculateEventHorizon.TabIndex = 0;
@@ -306,9 +288,9 @@
             // 
             groupBoxTemperatureConversion.Controls.Add(tableLayoutPanel4);
             groupBoxTemperatureConversion.Dock = DockStyle.Fill;
-            groupBoxTemperatureConversion.Location = new Point(3, 307);
+            groupBoxTemperatureConversion.Location = new Point(3, 321);
             groupBoxTemperatureConversion.Name = "groupBoxTemperatureConversion";
-            groupBoxTemperatureConversion.Size = new Size(274, 146);
+            groupBoxTemperatureConversion.Size = new Size(286, 153);
             groupBoxTemperatureConversion.TabIndex = 4;
             groupBoxTemperatureConversion.TabStop = false;
             groupBoxTemperatureConversion.Text = "Temperature Conversion";
@@ -326,7 +308,7 @@
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel4.Size = new Size(268, 124);
+            tableLayoutPanel4.Size = new Size(280, 131);
             tableLayoutPanel4.TabIndex = 2;
             // 
             // flowLayoutPanel7
@@ -334,9 +316,9 @@
             flowLayoutPanel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel7.AutoSize = true;
             flowLayoutPanel7.Controls.Add(flowLayoutPanel8);
-            flowLayoutPanel7.Location = new Point(3, 37);
+            flowLayoutPanel7.Location = new Point(3, 40);
             flowLayoutPanel7.Name = "flowLayoutPanel7";
-            flowLayoutPanel7.Size = new Size(181, 50);
+            flowLayoutPanel7.Size = new Size(193, 50);
             flowLayoutPanel7.TabIndex = 3;
             // 
             // flowLayoutPanel8
@@ -370,7 +352,7 @@
             // btnCalculateTemperatureConversion
             // 
             btnCalculateTemperatureConversion.Anchor = AnchorStyles.Right;
-            btnCalculateTemperatureConversion.Location = new Point(190, 50);
+            btnCalculateTemperatureConversion.Location = new Point(202, 54);
             btnCalculateTemperatureConversion.Name = "btnCalculateTemperatureConversion";
             btnCalculateTemperatureConversion.Size = new Size(75, 23);
             btnCalculateTemperatureConversion.TabIndex = 0;
@@ -384,7 +366,7 @@
             groupBoxStarVelocity.Dock = DockStyle.Fill;
             groupBoxStarVelocity.Location = new Point(3, 3);
             groupBoxStarVelocity.Name = "groupBoxStarVelocity";
-            groupBoxStarVelocity.Size = new Size(274, 146);
+            groupBoxStarVelocity.Size = new Size(286, 153);
             groupBoxStarVelocity.TabIndex = 3;
             groupBoxStarVelocity.TabStop = false;
             groupBoxStarVelocity.Text = "Star Velocity";
@@ -402,7 +384,7 @@
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(268, 124);
+            tableLayoutPanel2.Size = new Size(280, 131);
             tableLayoutPanel2.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -411,9 +393,9 @@
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel3);
-            flowLayoutPanel1.Location = new Point(3, 12);
+            flowLayoutPanel1.Location = new Point(3, 15);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(181, 100);
+            flowLayoutPanel1.Size = new Size(193, 100);
             flowLayoutPanel1.TabIndex = 3;
             // 
             // flowLayoutPanel2
@@ -475,7 +457,7 @@
             // btnCalculateStarVelocity
             // 
             btnCalculateStarVelocity.Anchor = AnchorStyles.Right;
-            btnCalculateStarVelocity.Location = new Point(190, 50);
+            btnCalculateStarVelocity.Location = new Point(202, 54);
             btnCalculateStarVelocity.Name = "btnCalculateStarVelocity";
             btnCalculateStarVelocity.Size = new Size(75, 23);
             btnCalculateStarVelocity.TabIndex = 0;
@@ -490,20 +472,22 @@
             datagridCalculations.AllowUserToOrderColumns = true;
             datagridCalculations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datagridCalculations.Dock = DockStyle.Fill;
-            datagridCalculations.Location = new Point(283, 3);
+            datagridCalculations.EnableHeadersVisualStyles = false;
+            datagridCalculations.Location = new Point(295, 3);
             datagridCalculations.Name = "datagridCalculations";
             datagridCalculations.ReadOnly = true;
+            datagridCalculations.RowHeadersVisible = false;
             tableLayoutPanel1.SetRowSpan(datagridCalculations, 4);
-            datagridCalculations.Size = new Size(274, 602);
+            datagridCalculations.Size = new Size(286, 630);
             datagridCalculations.TabIndex = 0;
             // 
             // groupBoxStarDistance
             // 
             groupBoxStarDistance.Controls.Add(tableLayoutPanel3);
             groupBoxStarDistance.Dock = DockStyle.Fill;
-            groupBoxStarDistance.Location = new Point(3, 155);
+            groupBoxStarDistance.Location = new Point(3, 162);
             groupBoxStarDistance.Name = "groupBoxStarDistance";
-            groupBoxStarDistance.Size = new Size(274, 146);
+            groupBoxStarDistance.Size = new Size(286, 153);
             groupBoxStarDistance.TabIndex = 2;
             groupBoxStarDistance.TabStop = false;
             groupBoxStarDistance.Text = "Star Distance";
@@ -521,7 +505,7 @@
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel3.Size = new Size(268, 124);
+            tableLayoutPanel3.Size = new Size(280, 131);
             tableLayoutPanel3.TabIndex = 2;
             // 
             // flowLayoutPanel4
@@ -529,9 +513,9 @@
             flowLayoutPanel4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel4.AutoSize = true;
             flowLayoutPanel4.Controls.Add(flowLayoutPanel5);
-            flowLayoutPanel4.Location = new Point(3, 37);
+            flowLayoutPanel4.Location = new Point(3, 40);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(181, 50);
+            flowLayoutPanel4.Size = new Size(193, 50);
             flowLayoutPanel4.TabIndex = 3;
             // 
             // flowLayoutPanel5
@@ -565,7 +549,7 @@
             // btnCalculateStarDistance
             // 
             btnCalculateStarDistance.Anchor = AnchorStyles.Right;
-            btnCalculateStarDistance.Location = new Point(190, 50);
+            btnCalculateStarDistance.Location = new Point(202, 54);
             btnCalculateStarDistance.Name = "btnCalculateStarDistance";
             btnCalculateStarDistance.Size = new Size(75, 23);
             btnCalculateStarDistance.TabIndex = 0;
@@ -580,11 +564,8 @@
             ClientSize = new Size(584, 661);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(toolStrip);
-            Controls.Add(statusStrip);
             Name = "MainWindow";
             Text = "Astronomical Processing";
-            statusStrip.ResumeLayout(false);
-            statusStrip.PerformLayout();
             toolStrip.ResumeLayout(false);
             toolStrip.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
@@ -630,12 +611,10 @@
 
         #endregion
 
-        private ColorDialog colorDialog;
+        private ThemeEditor colorDialog;
         private FontDialog fontDialog;
-        private StatusStrip statusStrip;
         private ToolStrip toolStrip;
         private TableLayoutPanel tableLayoutPanel1;
-        private ToolStripStatusLabel labelStatus;
         private ToolStripDropDownButton menuTheme;
         private ToolStripMenuItem menuitemThemeLight;
         private ToolStripMenuItem menuitemThemeDark;

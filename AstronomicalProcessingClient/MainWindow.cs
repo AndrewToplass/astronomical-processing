@@ -30,9 +30,10 @@ public partial class MainWindow : Form
         });
 
         ChangeLanguage(CultureInfo.CurrentCulture);
-
-        //comboLanguage.Items.AddRange(["en-US", "fr-FR", "de-DE"]);
-        //comboLanguage.SelectedIndex = 0;
+        this.ApplyTheme();
+        menuitemThemeLight.Checked = true;
+        menuitemThemeDark.Checked = false;
+        menuitemThemeCustom.Checked = false;
     }
 
     private void btnCalculateStarVelocity_Click(object sender, EventArgs e)
@@ -113,9 +114,15 @@ public partial class MainWindow : Form
 
     private void ChangeLanguage(CultureInfo cultureInfo)
     {
-        Thread.CurrentThread.CurrentCulture = cultureInfo;
-        Thread.CurrentThread.CurrentUICulture = cultureInfo;
+        CultureInfo.CurrentCulture = cultureInfo;
+        CultureInfo.CurrentUICulture = cultureInfo;
 
+        foreach (Form form in Application.OpenForms)
+        {
+            form.SetLanguage(form.GetType());
+        }
+
+        // Apply checkbox states in language menu.
         switch (cultureInfo.TwoLetterISOLanguageName)
         {
             case "fr":
@@ -138,18 +145,7 @@ public partial class MainWindow : Form
                 break;
         }
 
-        SuspendLayout();
-        foreach (Control control in GetAllControls(this))
-        {
-            _resources.ApplyResources(control, control.Name);
-        }
-
-        foreach (ToolStripItem item in GetAllToolStripItems(toolStrip))
-        {
-            if (item.Name is null) continue;
-            _resources.ApplyResources(item, item.Name);
-        }
-
+        // Refresh datagrid to update headers and value formatting.
         foreach (var column in datagridCalculations.Columns.Cast<DataGridViewColumn>())
         {
             _resources.ApplyResources(column, $"DataGrid.Headers.{column.Name}");
@@ -157,44 +153,6 @@ public partial class MainWindow : Form
         }
 
         datagridCalculations.Refresh();
-
-        ResumeLayout();
-    }
-
-    private static IEnumerable<ToolStripItem> GetAllToolStripItems(ToolStrip item)
-    {
-        return item.Items.Cast<ToolStripItem>().SelectMany(GetItems);
-
-        static IEnumerable<ToolStripItem> GetItems(ToolStripItem item)
-        {
-            List<ToolStripItem> items = [item];
-
-            switch (item)
-            {
-                case ToolStripMenuItem menuItem:
-                    foreach (ToolStripItem i in menuItem.DropDownItems)
-                        items.AddRange(GetItems(i));
-                    break;
-                case ToolStripSplitButton splitButton:
-                    foreach (ToolStripItem i in splitButton.DropDownItems)
-                        items.AddRange(GetItems(i));
-                    break;
-                case ToolStripDropDownButton dropDown:
-                    foreach (ToolStripItem i in dropDown.DropDownItems)
-                        items.AddRange(GetItems(i));
-                    break;
-            }
-
-            return items;
-        }
-    }
-
-    private static IEnumerable<Control> GetAllControls(Control control)
-    {
-        var controls = control.Controls.Cast<Control>();
-        return controls
-            .SelectMany(GetAllControls)
-            .Concat(controls);
     }
 
     private void menuitemEnglish_Click(object sender, EventArgs e)
@@ -224,5 +182,62 @@ public partial class MainWindow : Form
         });
 
         MessageBox.Show(errorMessage, errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+
+    private void menuitemThemeCustom_Click(object sender, EventArgs e)
+    {
+        var editor = new ThemeEditor
+        {
+            Theme = Theme.Current,
+            Font = fontDialog.Font
+        };
+
+        if (editor.ShowDialog() != DialogResult.OK) return;
+
+        menuitemThemeLight.Checked = false;
+        menuitemThemeDark.Checked = false;
+        menuitemThemeCustom.Checked = true;
+
+        Theme.Current = editor.Theme;
+        foreach (Form form in Application.OpenForms)
+        {
+            form.ApplyTheme();
+        }
+    }
+
+    private void menuitemThemeLight_Click(object sender, EventArgs e)
+    {
+        menuitemThemeLight.Checked = true;
+        menuitemThemeDark.Checked = false;
+        menuitemThemeCustom.Checked = false;
+
+        Theme.Current = Theme.Light;
+        foreach (Form form in Application.OpenForms)
+        {
+            form.ApplyTheme();
+        }
+    }
+
+    private void menuitemThemeDark_Click(object sender, EventArgs e)
+    {
+        menuitemThemeLight.Checked = false;
+        menuitemThemeDark.Checked = true;
+        menuitemThemeCustom.Checked = false;
+
+        Theme.Current = Theme.Dark;
+        foreach (Form form in Application.OpenForms)
+        {
+            form.ApplyTheme();
+        }
+    }
+
+    private void menuitemFont_Click(object sender, EventArgs e)
+    {
+        if (fontDialog.ShowDialog() != DialogResult.OK) return;
+
+        foreach (Form form in Application.OpenForms)
+        {
+            form.ApplyFont(fontDialog.Font);
+        }
     }
 }
