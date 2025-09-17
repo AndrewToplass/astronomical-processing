@@ -47,24 +47,24 @@
             flowLayoutPanel10 = new FlowLayoutPanel();
             flowLayoutPanel11 = new FlowLayoutPanel();
             labelBlackholeMass = new Label();
-            numericBlackholeMass = new NumericUpDown();
+            numericBlackholeMass = new NumericTextBox();
             btnCalculateEventHorizon = new Button();
             groupBoxTemperatureConversion = new GroupBox();
             tableLayoutPanel4 = new TableLayoutPanel();
             flowLayoutPanel7 = new FlowLayoutPanel();
             flowLayoutPanel8 = new FlowLayoutPanel();
             labelTemperatureC = new Label();
-            numericTemperatureC = new NumericUpDown();
+            numericTemperatureC = new NumericTextBox();
             btnCalculateTemperatureConversion = new Button();
             groupBoxStarVelocity = new GroupBox();
             tableLayoutPanel2 = new TableLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             flowLayoutPanel2 = new FlowLayoutPanel();
             labelObservedWavelength = new Label();
-            numericObservedWavelength = new NumericUpDown();
+            numericObservedWavelength = new NumericTextBox();
             flowLayoutPanel3 = new FlowLayoutPanel();
             labelRestWavelength = new Label();
-            numericRestWavelength = new NumericUpDown();
+            numericRestWavelength = new NumericTextBox();
             btnCalculateStarVelocity = new Button();
             datagridCalculations = new DataGridView();
             groupBoxStarDistance = new GroupBox();
@@ -72,7 +72,7 @@
             flowLayoutPanel4 = new FlowLayoutPanel();
             flowLayoutPanel5 = new FlowLayoutPanel();
             labelStarAngle = new Label();
-            numericStarAngle = new NumericUpDown();
+            numericStarAngle = new NumericTextBox();
             btnCalculateStarDistance = new Button();
             toolStrip.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -80,25 +80,20 @@
             tableLayoutPanel5.SuspendLayout();
             flowLayoutPanel10.SuspendLayout();
             flowLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericBlackholeMass).BeginInit();
             groupBoxTemperatureConversion.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             flowLayoutPanel7.SuspendLayout();
             flowLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericTemperatureC).BeginInit();
             groupBoxStarVelocity.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericObservedWavelength).BeginInit();
             flowLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericRestWavelength).BeginInit();
             ((System.ComponentModel.ISupportInitialize)datagridCalculations).BeginInit();
             groupBoxStarDistance.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericStarAngle).BeginInit();
             SuspendLayout();
             // 
             // toolStrip
@@ -253,7 +248,7 @@
             flowLayoutPanel11.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel11.Location = new Point(3, 3);
             flowLayoutPanel11.Name = "flowLayoutPanel11";
-            flowLayoutPanel11.Size = new Size(126, 44);
+            flowLayoutPanel11.Size = new Size(106, 44);
             flowLayoutPanel11.TabIndex = 0;
             flowLayoutPanel11.WrapContents = false;
             // 
@@ -270,8 +265,9 @@
             // 
             numericBlackholeMass.Location = new Point(3, 18);
             numericBlackholeMass.Name = "numericBlackholeMass";
-            numericBlackholeMass.Size = new Size(120, 23);
-            numericBlackholeMass.TabIndex = 1;
+            numericBlackholeMass.Size = new Size(100, 23);
+            numericBlackholeMass.TabIndex = 2;
+            numericBlackholeMass.Text = "0";
             // 
             // btnCalculateEventHorizon
             // 
@@ -329,7 +325,7 @@
             flowLayoutPanel8.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel8.Location = new Point(3, 3);
             flowLayoutPanel8.Name = "flowLayoutPanel8";
-            flowLayoutPanel8.Size = new Size(126, 44);
+            flowLayoutPanel8.Size = new Size(106, 44);
             flowLayoutPanel8.TabIndex = 0;
             flowLayoutPanel8.WrapContents = false;
             // 
@@ -346,8 +342,9 @@
             // 
             numericTemperatureC.Location = new Point(3, 18);
             numericTemperatureC.Name = "numericTemperatureC";
-            numericTemperatureC.Size = new Size(120, 23);
-            numericTemperatureC.TabIndex = 1;
+            numericTemperatureC.Size = new Size(100, 23);
+            numericTemperatureC.TabIndex = 2;
+            numericTemperatureC.Text = "0";
             // 
             // btnCalculateTemperatureConversion
             // 
@@ -406,7 +403,7 @@
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(3, 3);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(126, 44);
+            flowLayoutPanel2.Size = new Size(106, 44);
             flowLayoutPanel2.TabIndex = 0;
             flowLayoutPanel2.WrapContents = false;
             // 
@@ -423,8 +420,9 @@
             // 
             numericObservedWavelength.Location = new Point(3, 18);
             numericObservedWavelength.Name = "numericObservedWavelength";
-            numericObservedWavelength.Size = new Size(120, 23);
-            numericObservedWavelength.TabIndex = 1;
+            numericObservedWavelength.Size = new Size(100, 23);
+            numericObservedWavelength.TabIndex = 2;
+            numericObservedWavelength.Text = "1E-308";
             // 
             // flowLayoutPanel3
             // 
@@ -434,7 +432,7 @@
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Location = new Point(3, 53);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(126, 44);
+            flowLayoutPanel3.Size = new Size(106, 44);
             flowLayoutPanel3.TabIndex = 1;
             flowLayoutPanel3.WrapContents = false;
             // 
@@ -451,8 +449,9 @@
             // 
             numericRestWavelength.Location = new Point(3, 18);
             numericRestWavelength.Name = "numericRestWavelength";
-            numericRestWavelength.Size = new Size(120, 23);
-            numericRestWavelength.TabIndex = 1;
+            numericRestWavelength.Size = new Size(100, 23);
+            numericRestWavelength.TabIndex = 2;
+            numericRestWavelength.Text = "1E-308";
             // 
             // btnCalculateStarVelocity
             // 
@@ -526,7 +525,7 @@
             flowLayoutPanel5.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel5.Location = new Point(3, 3);
             flowLayoutPanel5.Name = "flowLayoutPanel5";
-            flowLayoutPanel5.Size = new Size(126, 44);
+            flowLayoutPanel5.Size = new Size(114, 44);
             flowLayoutPanel5.TabIndex = 0;
             flowLayoutPanel5.WrapContents = false;
             // 
@@ -543,8 +542,9 @@
             // 
             numericStarAngle.Location = new Point(3, 18);
             numericStarAngle.Name = "numericStarAngle";
-            numericStarAngle.Size = new Size(120, 23);
-            numericStarAngle.TabIndex = 1;
+            numericStarAngle.Size = new Size(100, 23);
+            numericStarAngle.TabIndex = 2;
+            numericStarAngle.Text = "1E-308";
             // 
             // btnCalculateStarDistance
             // 
@@ -576,7 +576,6 @@
             flowLayoutPanel10.PerformLayout();
             flowLayoutPanel11.ResumeLayout(false);
             flowLayoutPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericBlackholeMass).EndInit();
             groupBoxTemperatureConversion.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
@@ -584,7 +583,6 @@
             flowLayoutPanel7.PerformLayout();
             flowLayoutPanel8.ResumeLayout(false);
             flowLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericTemperatureC).EndInit();
             groupBoxStarVelocity.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
@@ -592,10 +590,8 @@
             flowLayoutPanel1.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
             flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericObservedWavelength).EndInit();
             flowLayoutPanel3.ResumeLayout(false);
             flowLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericRestWavelength).EndInit();
             ((System.ComponentModel.ISupportInitialize)datagridCalculations).EndInit();
             groupBoxStarDistance.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
@@ -604,7 +600,6 @@
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel5.ResumeLayout(false);
             flowLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericStarAngle).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -627,35 +622,35 @@
         private FlowLayoutPanel flowLayoutPanel4;
         private FlowLayoutPanel flowLayoutPanel5;
         private Label labelStarAngle;
-        private NumericUpDown numericStarAngle;
         private Button btnCalculateStarDistance;
         private GroupBox groupBoxEventHorizon;
         private TableLayoutPanel tableLayoutPanel5;
         private FlowLayoutPanel flowLayoutPanel10;
         private FlowLayoutPanel flowLayoutPanel11;
         private Label labelBlackholeMass;
-        private NumericUpDown numericBlackholeMass;
         private Button btnCalculateEventHorizon;
         private GroupBox groupBoxTemperatureConversion;
         private TableLayoutPanel tableLayoutPanel4;
         private FlowLayoutPanel flowLayoutPanel7;
         private FlowLayoutPanel flowLayoutPanel8;
         private Label labelTemperatureC;
-        private NumericUpDown numericTemperatureC;
         private Button btnCalculateTemperatureConversion;
         private GroupBox groupBoxStarVelocity;
         private TableLayoutPanel tableLayoutPanel2;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel flowLayoutPanel2;
         private Label labelObservedWavelength;
-        private NumericUpDown numericObservedWavelength;
         private FlowLayoutPanel flowLayoutPanel3;
         private Label labelRestWavelength;
-        private NumericUpDown numericRestWavelength;
         private Button btnCalculateStarVelocity;
         private ToolStripDropDownButton menuLanguage;
         private ToolStripMenuItem menuitemEnglish;
         private ToolStripMenuItem menuitemGerman;
         private ToolStripMenuItem menuitemFrench;
+        private NumericTextBox numericStarAngle;
+        private NumericTextBox numericTemperatureC;
+        private NumericTextBox numericObservedWavelength;
+        private NumericTextBox numericRestWavelength;
+        private NumericTextBox numericBlackholeMass;
     }
 }

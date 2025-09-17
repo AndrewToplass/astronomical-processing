@@ -96,7 +96,6 @@ internal static class Extensions
             switch (child)
             {
                 case Button btn:
-                    //btn.FlatAppearance.BorderColor = colors.Foreground;
                     btn.BackColor = theme.ButtonFace;
                     btn.ForeColor = theme.Foreground;
 
@@ -106,7 +105,13 @@ internal static class Extensions
                     btn.FlatAppearance.BorderColor = theme.ButtonBorder;
                     break;
 
-                case TextBox or ComboBox or ListBox or NumericUpDown:
+                case TextBox textBox:
+                    textBox.BackColor = theme.ButtonFace;
+                    textBox.ForeColor = theme.Foreground;
+                    textBox.BorderStyle = BorderStyle.FixedSingle;
+                    break;
+
+                case ComboBox or ListBox or NumericUpDown:
                     child.BackColor = theme.ButtonFace;
                     child.ForeColor = theme.Foreground;
                     break;
