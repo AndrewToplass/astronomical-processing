@@ -17,17 +17,14 @@ public partial class MainWindow : Form
 
     private readonly ComponentResourceManager _resources = new(typeof(MainWindow));
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MainWindow"/> class.
+    /// Sets up data bindings, default calculation, language, and theme.
+    /// </summary>
     public MainWindow()
     {
         InitializeComponent();
         datagridCalculations.DataSource = _calculations;
-
-        _calculations.Add(new()
-        {
-            Operation = CalculationOperation.StarVelocity,
-            Result = 123.45,
-            Inputs = [1.0, 2.0]
-        });
 
         ChangeLanguage(CultureInfo.CurrentCulture);
         this.ApplyTheme();
@@ -36,6 +33,12 @@ public partial class MainWindow : Form
         menuitemThemeCustom.Checked = false;
     }
 
+    /// <summary>
+    /// Handles the click event for the Star Velocity calculation button.
+    /// Performs the calculation and adds the result to the list.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void btnCalculateStarVelocity_Click(object sender, EventArgs e)
     {
         var observedWavelength = (double)numericObservedWavelength.Value;
@@ -57,6 +60,12 @@ public partial class MainWindow : Form
         });
     }
 
+    /// <summary>
+    /// Handles the click event for the Star Distance calculation button.
+    /// Performs the calculation and adds the result to the list.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void btnCalculateStarDistance_Click(object sender, EventArgs e)
     {
         var angle = (double)numericStarAngle.Value;
@@ -74,6 +83,12 @@ public partial class MainWindow : Form
         });
     }
 
+    /// <summary>
+    /// Handles the click event for the Temperature Conversion calculation button.
+    /// Converts Celsius to Kelvin and adds the result to the list.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void btnCalculateTemperatureConversion_Click(object sender, EventArgs e)
     {
         var celsius = (double)numericTemperatureC.Value;
@@ -93,6 +108,12 @@ public partial class MainWindow : Form
         });
     }
 
+    /// <summary>
+    /// Handles the click event for the Event Horizon calculation button.
+    /// Calculates the event horizon for a black hole and adds the result to the list.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void btnCalculateEventHorizon_Click(object sender, EventArgs e)
     {
         var mass = (double)numericBlackholeMass.Value;
@@ -112,6 +133,10 @@ public partial class MainWindow : Form
         });
     }
 
+    /// <summary>
+    /// Changes the UI language and updates controls and menu items accordingly.
+    /// </summary>
+    /// <param name="cultureInfo">The culture to apply.</param>
     private void ChangeLanguage(CultureInfo cultureInfo)
     {
         CultureInfo.CurrentCulture = cultureInfo;
@@ -153,22 +178,44 @@ public partial class MainWindow : Form
         }
     }
 
+    /// <summary>
+    /// Handles the click event for the English language menu item.
+    /// Sets the UI language to English.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemEnglish_Click(object sender, EventArgs e)
     {
         ChangeLanguage(new CultureInfo("en"));
     }
 
+    /// <summary>
+    /// Handles the click event for the German language menu item.
+    /// Sets the UI language to German.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemGerman_Click(object sender, EventArgs e)
     {
         ChangeLanguage(new CultureInfo("de"));
 
     }
 
+    /// <summary>
+    /// Handles the click event for the French language menu item.
+    /// Sets the UI language to French.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemFrench_Click(object sender, EventArgs e)
     {
         ChangeLanguage(new CultureInfo("fr"));
     }
 
+    /// <summary>
+    /// Displays an error message box based on the exception type.
+    /// </summary>
+    /// <param name="exception">The exception to display.</param>
     private void DisplayError(Exception? exception)
     {
         var errorTitle = _resources.GetString("Messagebox.ErrorTitle");
@@ -182,6 +229,12 @@ public partial class MainWindow : Form
         MessageBox.Show(errorMessage, errorTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
+    /// <summary>
+    /// Handles the click event for the custom theme menu item.
+    /// Opens the theme editor and applies the selected theme.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemThemeCustom_Click(object sender, EventArgs e)
     {
         var editor = new ThemeEditor
@@ -203,6 +256,12 @@ public partial class MainWindow : Form
         }
     }
 
+    /// <summary>
+    /// Handles the click event for the light theme menu item.
+    /// Applies the light theme to all open forms.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemThemeLight_Click(object sender, EventArgs e)
     {
         menuitemThemeLight.Checked = true;
@@ -216,6 +275,12 @@ public partial class MainWindow : Form
         }
     }
 
+    /// <summary>
+    /// Handles the click event for the dark theme menu item.
+    /// Applies the dark theme to all open forms.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemThemeDark_Click(object sender, EventArgs e)
     {
         menuitemThemeLight.Checked = false;
@@ -229,6 +294,12 @@ public partial class MainWindow : Form
         }
     }
 
+    /// <summary>
+    /// Handles the click event for the font selection menu item.
+    /// Opens the font dialog and applies the selected font to all open forms.
+    /// </summary>
+    /// <param name="sender">The event source.</param>
+    /// <param name="e">Event arguments.</param>
     private void menuitemFont_Click(object sender, EventArgs e)
     {
         if (fontDialog.ShowDialog() != DialogResult.OK) return;

@@ -7,11 +7,17 @@ using System.ComponentModel;
 using System.Globalization;
 
 namespace AstronomicalProcessingClient;
+/// <summary>
+/// A TextBox control that only accepts numeric input and enforces minimum and maximum value constraints.
+/// </summary>
 internal class NumericTextBox : TextBox
 {
     private double _min = double.MinValue;
     private double _max = double.MaxValue;
 
+    /// <summary>
+    /// Gets or sets the minimum allowed value for the control.
+    /// </summary>
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public double Min
     {
@@ -26,6 +32,9 @@ internal class NumericTextBox : TextBox
         }
     }
 
+    /// <summary>
+    /// Gets or sets the maximum allowed value for the control.
+    /// </summary>
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public double Max
     {
@@ -42,6 +51,10 @@ internal class NumericTextBox : TextBox
 
     private double _value;
 
+    /// <summary>
+    /// Gets or sets the current numeric value of the control.
+    /// The value is clamped between <see cref="Min"/> and <see cref="Max"/>.
+    /// </summary>
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public double Value
     {
@@ -53,11 +66,19 @@ internal class NumericTextBox : TextBox
         }
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NumericTextBox"/> class with a default value of 0.
+    /// </summary>
     public NumericTextBox()
     {
         Value = 0;
     }
 
+    /// <summary>
+    /// Handles the event when the control loses focus.
+    /// Parses the text and updates the value, or reverts to the last valid value if parsing fails.
+    /// </summary>
+    /// <param name="e">An <see cref="EventArgs"/> that contains the event data.</param>
     protected override void OnLostFocus(EventArgs e)
     {
         base.OnLostFocus(e);
@@ -74,6 +95,10 @@ internal class NumericTextBox : TextBox
         }
     }
 
+    /// <summary>
+    /// Handles the key press event to restrict input to valid numeric characters.
+    /// </summary>
+    /// <param name="e">A <see cref="KeyPressEventArgs"/> that contains the event data.</param>
     protected override void OnKeyPress(KeyPressEventArgs e)
     {
         base.OnKeyPress(e);
@@ -91,6 +116,9 @@ internal class NumericTextBox : TextBox
         }
     }
 
+    /// <summary>
+    /// Updates the displayed text to match the current value.
+    /// </summary>
     public override void Refresh()
     {
         Text = Value.ToString();

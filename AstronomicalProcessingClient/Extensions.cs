@@ -13,6 +13,11 @@ using AstronomicalProcessingClient.Properties;
 namespace AstronomicalProcessingClient;
 internal static class Extensions
 {
+    /// <summary>
+    /// Finds all descendant controls of the specified control, recursively.
+    /// </summary>
+    /// <param name="control">The root control to search from.</param>
+    /// <returns>An enumerable of all descendant controls.</returns>
     public static IEnumerable<Control> FindAllDescendants(this Control control)
     {
         var controls = control.Controls.Cast<Control>();
@@ -21,6 +26,11 @@ internal static class Extensions
             .Concat(controls);
     }
 
+    /// <summary>
+    /// Finds all items within a ToolStrip, including nested items in drop-downs.
+    /// </summary>
+    /// <param name="toolStrip">The ToolStrip to search.</param>
+    /// <returns>An enumerable of all ToolStripItems, including nested items.</returns>
     public static IEnumerable<ToolStripItem> FindAllItems(this ToolStrip toolStrip)
     {
         return toolStrip.Items.Cast<ToolStripItem>().SelectMany(GetItems);
@@ -49,6 +59,12 @@ internal static class Extensions
         }
     }
 
+    /// <summary>
+    /// Sets the language for the specified form using resources for localization.
+    /// </summary>
+    /// <typeparam name="T">The type of the form.</typeparam>
+    /// <param name="control">The form to localize.</param>
+    /// <param name="cultureInfo">The culture to apply. If null, uses the current UI culture.</param>
     public static void SetLanguage<T>(
         this T control,
         CultureInfo? cultureInfo = null
@@ -57,6 +73,12 @@ internal static class Extensions
         control.SetLanguage(typeof(T), cultureInfo);
     }
 
+    /// <summary>
+    /// Sets the language for the specified control and its descendants using resources for localization.
+    /// </summary>
+    /// <param name="control">The control to localize.</param>
+    /// <param name="type">The type used to locate resources.</param>
+    /// <param name="cultureInfo">The culture to apply. If null, uses the current UI culture.</param>
     public static void SetLanguage(
         this Control control,
         Type type,
@@ -86,6 +108,10 @@ internal static class Extensions
         control.ResumeLayout();
     }
 
+    /// <summary>
+    /// Applies the current theme to the specified control and all its descendants.
+    /// </summary>
+    /// <param name="control">The control to apply the theme to.</param>
     public static void ApplyTheme(this Control control)
     {
         var theme = Theme.Current;
@@ -146,6 +172,11 @@ internal static class Extensions
         }
     }
 
+    /// <summary>
+    /// Applies the specified font to the control and all its descendants.
+    /// </summary>
+    /// <param name="control">The control to apply the font to.</param>
+    /// <param name="font">The font to apply.</param>
     public static void ApplyFont(this Control control, Font font)
     {
         control.Font = font;
