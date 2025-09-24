@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace AstronomicalProcessingClient;
 internal class NumericTextBox : TextBox
@@ -47,7 +48,7 @@ internal class NumericTextBox : TextBox
         get => _value;
         set
         {
-            _value = value;
+            _value = Math.Clamp(value, Min, Max);
             Text = Value.ToString();
         }
     }
@@ -63,7 +64,7 @@ internal class NumericTextBox : TextBox
 
         if (double.TryParse(Text, out double newValue))
         {
-            Value = Math.Clamp(newValue, Min, Max);
+            Value = newValue;
         }
         else
         {
@@ -72,22 +73,6 @@ internal class NumericTextBox : TextBox
             SelectionStart = Text.Length; // Move cursor to the end
         }
     }
-
-    //protected override void OnTextChanged(EventArgs e)
-    //{
-    //    base.OnTextChanged(e);
-
-    //    if (double.TryParse(Text, out double newValue))
-    //    {
-    //        _value = newValue;
-    //    }
-    //    else
-    //    {
-    //        // Revert to the last valid value if parsing fails
-    //        Text = _value.ToString();
-    //        SelectionStart = Text.Length; // Move cursor to the end
-    //    }
-    //}
 
     protected override void OnKeyPress(KeyPressEventArgs e)
     {
@@ -104,5 +89,11 @@ internal class NumericTextBox : TextBox
             e.Handled = true; // Invalid character
             return;
         }
+    }
+
+    public override void Refresh()
+    {
+        Text = Value.ToString();
+        base.Refresh();
     }
 }

@@ -151,8 +151,6 @@ public partial class MainWindow : Form
             _resources.ApplyResources(column, $"DataGrid.Headers.{column.Name}");
             column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
-
-        datagridCalculations.Refresh();
     }
 
     private void menuitemEnglish_Click(object sender, EventArgs e)

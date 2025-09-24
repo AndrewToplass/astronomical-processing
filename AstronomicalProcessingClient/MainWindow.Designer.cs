@@ -14,6 +14,7 @@
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
+            if (disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -422,7 +423,7 @@
             numericObservedWavelength.Name = "numericObservedWavelength";
             numericObservedWavelength.Size = new Size(100, 23);
             numericObservedWavelength.TabIndex = 2;
-            numericObservedWavelength.Text = "1E-308";
+            numericObservedWavelength.Text = "0";
             // 
             // flowLayoutPanel3
             // 
@@ -451,7 +452,7 @@
             numericRestWavelength.Name = "numericRestWavelength";
             numericRestWavelength.Size = new Size(100, 23);
             numericRestWavelength.TabIndex = 2;
-            numericRestWavelength.Text = "1E-308";
+            numericRestWavelength.Text = "0";
             // 
             // btnCalculateStarVelocity
             // 
@@ -544,7 +545,7 @@
             numericStarAngle.Name = "numericStarAngle";
             numericStarAngle.Size = new Size(100, 23);
             numericStarAngle.TabIndex = 2;
-            numericStarAngle.Text = "1E-308";
+            numericStarAngle.Text = "0";
             // 
             // btnCalculateStarDistance
             // 

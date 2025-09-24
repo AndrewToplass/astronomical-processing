@@ -71,6 +71,7 @@ internal static class Extensions
         foreach (var child in control.FindAllDescendants())
         {
             resources.ApplyResources(child, child.Name, cultureInfo);
+            child.Refresh();
 
             if (child is ToolStrip toolStrip)
             {
